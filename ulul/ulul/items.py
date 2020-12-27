@@ -13,6 +13,7 @@ class UlulItem(scrapy.Item):
     name = scrapy.Field()
     short_description=scrapy.Field()
     no_of_supporters= scrapy.Field()
+    percentage_funded=scrapy.Field()
     fund_raised=scrapy.Field()
     goal=scrapy.Field()
     date_end=scrapy.Field()
@@ -20,3 +21,4 @@ class UlulItem(scrapy.Item):
     video=scrapy.Field()
     description=scrapy.Field()
     projectowner=scrapy.Field()
+

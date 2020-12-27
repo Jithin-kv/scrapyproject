@@ -73,8 +73,8 @@ class UluleSpider(scrapy.Spider):
         text = re.findall(r'"description".*?",', json_data)[0].strip('description"')
 
         description={'text':text}
-        projectowner=re.findall(r'"description_yourself".*?,',json_data)
-        teammember=re.findall(r'left;\".*?,',json_data)
+        projectowner=re.findall(r'"description_yourself".*?,',json_data)[0]
+
 
 
 
@@ -83,6 +83,7 @@ class UluleSpider(scrapy.Spider):
             name = name,
             short_description = short_description,
             no_of_supporters = no_of_supporters,
+            percentage_funded=percentage_funded,
             fund_raised=fund_raised,
             goal=goal,
             date_end=date_end,
@@ -90,7 +91,7 @@ class UluleSpider(scrapy.Spider):
             video=video,
             description=description,
             projectowner=projectowner,
-            teammember=teammember,
+
 
 
 
