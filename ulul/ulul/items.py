@@ -21,4 +21,6 @@ class UlulItem(scrapy.Item):
     video=scrapy.Field()
     description=scrapy.Field()
     projectowner=scrapy.Field()
+    teammember=scrapy.Field()
+
 
